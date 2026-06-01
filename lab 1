@@ -1,0 +1,165 @@
+#1.Take two numbers from the user and perform:
+#i)Addition
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a+b)
+
+#ii)subraction
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a-b)
+
+#iii)multipcation
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a*b)
+
+#iv)division
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a/b)
+
+#v)modulus
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a%b)
+
+#vi) floor division
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a**b)
+# vii)Exponentiation
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a//b)
+
+#2.Write a program to calculate the area and perimeter of a rectangle,square and circle.
+
+# Rectangle
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+
+rect_area = length * width
+rect_perimeter = 2 * (length + width)
+
+print("Rectangle Area =", rect_area)
+print("Rectangle Perimeter =", rect_perimeter)
+
+# Square
+side = float(input("\nEnter the side of the square: "))
+
+square_area = side * side
+square_perimeter = 4 * side
+
+print("Square Area =", square_area)
+print("Square Perimeter =", square_perimeter)
+
+# Circle
+radius = float(input("\nEnter the radius of the circle: "))
+
+circle_area = 3.14 * radius * radius
+circle_perimeter = 2 * 3.14 * radius
+
+print("Circle Area =", circle_area)
+print("Circle Circumference =", circle_perimeter)
+
+#3.Find the average of three numbers entered by the user.
+
+a= float(input("Enter first number: "))
+b= float(input("Enter second number: "))
+c= float(input("Enter third number: "))
+
+average = (a+b+c) / 3
+print("Average =", average)
+
+#4.Write a program to check:
+#i)If two numbers are equal
+a=int(input("Enter a:"))
+b= int(input("Enter b:"))
+print(a==b)
+
+#ii)If one number is greater than the other
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+if a>b:
+    print(a, "is greater than", b)
+elif b > a:
+    print(b, "is greater than", a)
+else:
+    print("Both numbers are equal")
+      
+#iii)If a number is less than or equal to another
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a <= b:
+    print(a, "is less than or equal to", b)
+else:
+    print(a, "is greater than", b)
+
+#5.Find the square root of the number.
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a**b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
