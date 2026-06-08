@@ -1,0 +1,58 @@
+#.Take your name as input and print it in uppercase.
+a= "dhakshithaa"
+print(a.upper())
+
+#2.Take a sentence and convert it into lowercase
+b = "You Can Do It"
+print(b.lower())
+
+
+# Enter a sentence and print it with the first letter capitalized.
+c="title"
+print(c.capitalize())
+
+# Use format() to display your name and age in a sentence
+name = "Dhakshithaa"
+age = 18
+print("My name is {} and I am {} years old.".format(name, age))
+
+#Find the index of a given character in a word.
+d="try your best"
+print(d.index('o'))
+print(d.index('y'))
+print(d.index('t'))
+
+
+#Find the position of a substring in a sentence using find().
+
+sentence = "Python is easy to learn"
+substring = "l"
+
+position = sentence.find(substring)
+
+print("Position:", position)
+
+
+#Check if a word ends with "ing" using endswith()
+
+e = input("Enter a word: ")
+
+if e.endswith("ing"):
+    print("The word ends with 'ing'.")
+else:
+    print("The word does not end with 'ing'.")
+
+
+#Print a string with tabs (\t) and then use expandtabs() to show spaces
+
+text = "Name\tof\tthe company"
+print("Original String:")
+print(text)
+print("After expandtabs():")
+print(text.expandtabs())
+
+#Encode a string into UTF-8 using encode().
+
+e = "dhakshithaa!"
+f = e.encode("utf-8")
+print(f)
