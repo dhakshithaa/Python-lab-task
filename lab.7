@@ -1,20 +1,184 @@
-'''#Dictionaries
+#Dictionaries
 #Create a dictionary with 5 students and their marks.
 
-a=1:{"Dhakshithaa","94",2:"Keerithi","98",3:"Vishal","90",4:"Deepika","89",5:"Nisha","90"}
-print(a)
+students = {
+    "dhakshithaa ": 99,
+    "keerithi": 92,
+    "vishal": 78,
+    "deepica": 88,
+    "jaya": 85
+}
+
+print(students)
 
 #Access and print the marks of a specific student.
-B={1:"Dhakshithaa",2:"Keerithi",3:"Vishal",4:"Deepika",5:"Nisha",}
-B.copy({2:"Keerithi"})
-print(B)'''
 
-#Add a new student to the dictionary.
-C={1:"Dhakshithaa",2:"Keerithi",3:"Vishal",4:"Deepika",5:"Nisha",}
-C.update({5:"jayashree"})
-print(C)
+students = {
+    "dhakshithaa": 91,
+    "keerithi": 85,
+    "vishal": 94,
+    "deepica": 78,
+    "jaya": 89
+}
 
+print(students["vishal"])
+
+# Add a new student to the dictionary.
+
+students = {
+    "dhakshithaa": 91,
+    "keerithi": 85,
+    "vishal": 94,
+    "deepica": 78,
+    "jaya": 89
+}
+
+students["Kavin"] = 87
+
+print(students)
+
+#Find the student with the highest marks.
+students = {
+    "dhakshithaa": 91,
+    "keerithi": 85,
+    "vishal": 94,
+    "deepica": 78,
+    "jaya": 89
+}
+
+top_student = max(students, key=students.get)
+
+print("Student with the highest marks:", top_student)
+print("Marks:", students[top_student])
+
+#Merge two dictionaries into one.
+
+students1 = {
+   "dhakshithaa": 91,
+    "keerithi": 85,
+    "vishal": 94,
+}
+
+students2 = {
+    "deepica": 78,
+    "jaya": 89
+}
+
+students1.update(students2)
+
+print(students1)
+
+#Count character frequencies in a string using a dictionary
+text = input("Enter a string: ")
+
+frequency = {}
+
+for char in text:
+    if char in frequency:
+        frequency[char] += 1
+    else:
+        frequency[char] = 1
+
+print("Character Frequencies:")
+for char, count in frequency.items():
+    print(char, ":", count)
 
 #Functions:
 #Find the length of a string
-def _   
+
+def find_length(text):
+    return len(text)
+
+string = input("Enter a string: ")
+print("Length of the string is:", find_length(string))
+
+#Find the maximum value of the number
+
+
+def find_max(numbers):
+    return max(numbers)
+
+numbers = [10, 25, 8, 45, 32]
+
+print("Maximum value is:", find_max(numbers))
+
+#Find the minimum value of the number
+
+def find_min(numbers):
+    return min(numbers)
+
+numbers = [10, 25, 8, 45, 32]
+
+print("Minimum value is:", find_min(numbers))
+
+#Find the sum of the number
+
+def find_sum(numbers):
+    return sum(numbers)
+
+numbers = [10, 20, 30, 40, 50]
+
+print("Sum of the numbers is:", find_sum(numbers))
+
+#Factorial using recursion function
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+
+print("Factorial of", num, "is:", factorial(num))
+
+
+#Write a function student_details(name, roll, dept) that prints the details using positional arguments.
+
+def student_details(name, roll, dept):
+    print("Student Name :", name)
+    print("Roll Number  :", roll)
+    print("Department   :", dept)
+
+student_details("Keerthi", 101, "Computer Science")
+
+#Write a function calculate_total(marks1, marks2, marks3) to calculate the total marks of a student using positional.
+
+def calculate_total(marks1, marks2, marks3):
+    total = marks1 + marks2 + marks3
+    print("Total Marks:", total)
+
+calculate_total(85, 90, 88)
+
+#Write a function rectangle_area(length, width) that calculates the area of a rectangle using positional argument.
+
+def rectangle_area(length, width):
+    area = length * width
+    print("Area of the rectangle:", area)
+
+rectangle_area(10, 5)
+
+#Write a function greet_user(name, message="Good Morning") that prints a greeting using default argument.
+
+def greet_user(name, message="Good Morning"):
+    print(message + ", " + name + "!")
+greet_user("Keerthi")
+greet_user("Keerthi", "Welcome")
+
+#Write a function add_numbers(*args) that returns the sum of any number of values.
+
+def add_numbers(*args):
+    return sum(args)
+
+total = add_numbers(10, 20, 30, 40, 50)
+print("Sum:", total)
+
+#Write a function multiply_all(*args) that multiplies any number of values.
+
+def multiply_all(*args):
+    result = 1
+    for num in args:
+        result *= num
+    return result
+
+product = multiply_all(2, 3, 4, 5)
+print("Product:", product)
