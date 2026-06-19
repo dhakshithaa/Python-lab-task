@@ -102,64 +102,43 @@ a=int(input("Enter a:"))
 b=int(input("Enter b:"))
 print(a**b)
 
+#Find the Simple interest and compound interest of a number
+# Input values
+P = float(input("Enter Principal Amount: "))
+R = float(input("Enter Rate of Interest (%): "))
+T = float(input("Enter Time (years): "))
 
+# Simple Interest
+SI = (P * R * T) / 100
 
+# Compound Interest
+A = P * (1 + R/100) ** T
+CI = A - P
 
+print("Simple Interest =", SI)
+print("Compound Interest =", CI)
 
+#.Swapping of 2 numbers using arithmetic operators 
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+a = a + b
+b = a - b
+a = a - b
+print("After swapping:")
+print("First number =", a)
+print("Second number =", b)
 
+#Find the cube root of the number.
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+print(a**b)
 
+#Find the last 2 digit of 8523
+num = 8523
+last_two_digits = num % 100
+print(last_two_digits)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#Remove the last 2 digit of 8523
+num = 8523
+result = num // 100
+print("After removing the last 2 digits:", result)
