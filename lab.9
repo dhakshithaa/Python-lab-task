@@ -1,127 +1,204 @@
-'''''# 1.Math Module Tasks
+                                            #Math Module Tasks
 
-#Task 1
+       #Task 1
 
 #Find Square root of 144
 import math
-print(math.sqrt(144))
+
+num = 144
+a = math.sqrt(num)
+
+print("Square root:", a)
 
 #find Power of 5³
-print(math.factorial(5))
-
-#find Factorial of 6
-print(math.factorial(6))
-
-#Task 2
-
-#Calculate ceil(5.2)
 import math
-print (math.ceil(5.2))
 
-#find floor(5.8)
-print (math.floor(5.8))
+ b= math.pow(5, 3)
 
-#find gcd(24, 36)
-print (math.gcd(24,36))
+print("5³ =", b)
 
-#Task 3
-
-#Create a calculator using the math module.
+# find Factorial of 6
 import math
-print(math.sqrt(8))
-print(math.degrees(math.pi))
-print(math.radians(90))
-print(math.sin(math.pi/2))
-print(math.cos(math.pi/2))
-print(math.tan(math.pi/2))
-print(math.ceil(5.2))
-print(math.floor(5.8))
-print(math.cos(30))
-print(math.tan(30))
-print(math.degrees(math.pi/2))
-print(math.radians(90))
-print(math.sin(30))'''''
-from click import parser
-from calendar import isleap
-import datetime
-#2. Datetime Module Tasks
 
-#Task 1
+c = math.factorial(6)
 
-#Display Current date
-import datetime as dt
-from calendar import calendar
+        #Task 2
+#Calculate:ceil(5.2)
+import math
 
-#print(dt.date.today())
+print("Ceil of 5.2 =", math.ceil(5.2))
 
-#Current time
-#print(dt.datetime.today())
+#Calculate:floor(5.8)
+import math
 
-#Current year
+print("Floor of 5.8 =", math.floor(5.8))
 
-#print(dt.datetime.today().year)
+#Calculate:gcd(24, 36)
+import math
 
-#Task 2
+print("GCD of 24 and 36 =", math.gcd(24, 36))
 
+            #Task 3
+Create a calculator using the math module.
+
+import math
+
+d = float(input("Enter first number: "))
+e = float(input("Enter second number: "))
+
+print("1.Add 2.Subtract 3.Multiply 4.Divide 5.Power ")
+choice = int(input("Enter choice: "))
+
+if choice == 1:
+    print(d + e)
+elif choice == 2:
+    print(d - e)
+elif choice == 3:
+    print(d * e)
+elif choice == 4:
+    print(d / e)
+elif choice == 5:
+    print(math.pow(d, e))
+else:
+    print("Invalid choice")
+                                    #2. Datetime Module Tasks
+          #Task 1                                    
+#Display:Current date
+from datetime import datetime
+
+now = datetime.now()
+
+print("Current Date:", now.date())
+
+#Display:Current time
+print("Current Time:", now.time())
+
+#Display:Current year
+print("Current Year:", now.year)
+
+           #Task 2
 #Find your age using date of birth.
 
-#print(datetime.timedelta(days=6205))
+from datetime import datetime
 
-#task
+f = input("Enter DOB (DD-MM-YYYY): ")
+birth = datetime.strptime(f, "%d-%m-%Y")
 
-# 3. Date Module Tasks
+age = datetime.now().year - birth.year
 
-#Task 1
+print("Age:", age)
+
+          #Task 3
+          
+#Print today's date in Python DD-MM-YYYY format
+
+from datetime import datetime
+
+today = datetime.today()
+
+print(today.strftime("%d-%m-%Y"))
+
+                                                  # 3. Date Module Tasks
+           #Task 1
 
 #Create a date object for your birthday.
-import datetime as d
-#print (d.date.today())
 
+from datetime import date
 
-# Task 2
+birthday = date(2008, 10, 7)
 
-#Find the difference between:Today's date Your birthday
+print("My Birthday:", birthday)
 
-#Task 3
-#Display:Day Month Year separately
+              #Task 2
 
+#Find the difference between: Today's date and Your birthday
+from datetime import date
 
-#4. Calendar Module Tasks
+bday = date(2005, 8, 15)  
 
-#Task 1
+print("Difference:", tday - bday)
 
-#Print calendar for current month.
-#import calendar as c
-#print(c.Moncalender(year2026,month:6))
+               #Task 3
+#Display:Day, month and Year separately
+ from datetime import date
 
-#Task 2
+today = date.today()
 
-# Print calendar for the year 2026.
+print("Day:", today.day)
+print("Month:", today.month)
+print("Year:", today.year)
+
+                                  #4. Calendar Module Tasks
+                                  
+                #Task 1
+# Print calendar for current month.
 import calendar
+from datetime import date
+
+today = date.today()
+
+print(calendar.month(today.year, today.month))
+
+               #Task 2
+#Print calendar for the year 2026.
+import calendar
+
+print(calendar.calendar(2026))
+
+                #task 3
+Check whether:2024, 2025 and 2026 are leap years.
+
+import calendar
+
+print("2024:", calendar.isleap(2024))
+print("2025:", calendar.isleap(2025))
+print("2026:", calendar.isleap(2026))
+
+                 #Task 4
+Find the weekday of your birthday.
+import calendar
+
+year = 2005
+month = 8
+day = 15
+
+print(calendar.day_name[calendar.weekday(year, month, day)])
+
+                                    #5. PyWhatKit Tasks
+                     #Task 1
+
+#Send a WhatsApp message automatically.
+import pywhatkit
+
+phone = "+944017829"   
+message = "Hello! This is a test message."
+
+pywhatkit.sendwhatmsg_instantly(phone, message)
+
+                      #Task 2
+    #Search "Python Programming" on Google using PyWhatKit.
 
 import pywhatkit
 
-print (calendar.calendar(2026))
+pywhatkit.search("Python Programming")
 
-#Check whether:
-#2024
-#2025
-#2028
-#are leap years.
+                      #Task 3
+#Play a YouTube video automatically.
 
-print(calendar.calendar, isleap(2024))
-print(calendar.calendar ,isleap(2025))
-print(calendar.calendar ,isleap(2026))
+import pywhatkit
 
-#5. PyWhatKit Tasks
+pywhatkit.playonyt("Python Tutorial")
 
-#Task 1
-#Send a WhatsApp message automatically
-import PyWhatKit as kit
-kit.sendwhatmsg("9514274012","hello",15,20)
+              #Task 4
+Convert text into handwritten style.
 
-#Task 2
-#Search "Python Programming" on Google using PyWhatKit.
+import pywhatkit
+
+pywhatkit.text_to_handwriting("Hello, Welcome to Python!")
+
+                                        #6. Random Module Tasks
+             #Task 1
+             
 
 
 
@@ -134,13 +211,12 @@ kit.sendwhatmsg("9514274012","hello",15,20)
 
 
 
-#6. Random Module Tasks
 
-#Task 1
 
-#Generate a random number between 1 and 100.
-import random as rnd
-print(rnd.random(a:1, b:100))
+
+
+
+            
 
 
 
@@ -160,3 +236,46 @@ print(rnd.random(a:1, b:100))
 
 
 
+
+
+
+                                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("Factorial of 6 =", c)
+
+#
